@@ -62,9 +62,9 @@ void loop()
   //    dt[1] = (0x26 << 2) + M_STANBY;
   //     Wire.write((int)DRV_ADR, (char *)dt, 2);
   Wire.write((byte)CTR_ADR);
-  Wire.write((0x26 << 2) + M_STANBY);
+  Wire.write((0x3F << 2) + M_NORMAL);
   Wire.endTransmission();
 
   Serial.println("LOOP");
-
+  delay(1000);
 }
